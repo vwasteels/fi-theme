@@ -1,0 +1,26 @@
+# node
+node_modules
+npm-debug.log
+
+# composer
+vendor
+
+# OS
+.DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# ignore all files starting with .
+.*
+!.gitignore
+!.editorconfig
+
+# generated files
+app.css
+app.js
+footer-compiled.php
+header-compiled.php
+cache

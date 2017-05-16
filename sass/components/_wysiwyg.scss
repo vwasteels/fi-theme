@@ -1,0 +1,64 @@
+@mixin wysiwyg($fontColor: dark) {
+
+	h2 {
+		@include typo(large orange);
+		@include fluid(margin, $desktop: 40 0 20 0);
+	}
+	p {
+		@include typo($desktop: small $fontColor justify, $mobile: left);
+		@include fluid(margin-bottom, $desktop: 20);
+	}
+	a {
+		color: color(orange);
+		text-decoration: underline;
+		&:hover { color: color(red); }
+	}
+	ul, ol {
+		@include fluid(margin-bottom, $desktop: 10);
+		li {
+			@include typo(small $fontColor);
+			@include fluid(margin-left, $desktop: 20);
+		}
+	}
+
+	ul li {
+		list-style: disc outside;
+	}
+	ol li {
+		list-style: decimal outside;
+	}
+
+	.gallery {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-item {
+			
+			margin-right: fluid-value(10);
+			margin-bottom: fluid-value(10);
+			&:hover { opacity: 0.7; }
+
+			a, img { display: block; }
+		}
+		
+	}
+
+	iframe {
+		width: 100%;
+		@include fluid(margin, $desktop: 10 0);
+	}
+
+	.aligncenter {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.alignright { float: right; margin-left: 20px; }
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}

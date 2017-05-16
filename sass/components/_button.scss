@@ -1,0 +1,11 @@
+@mixin button() {
+	@include typo($desktop: center bold lighter);
+
+	cursor: pointer;
+	position: relative;
+	white-space: nowrap;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

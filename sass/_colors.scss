@@ -1,0 +1,29 @@
+/**
+ * Colors map.
+ */
+
+$colors: (
+
+	// shades of grey
+  lighter: #FFFFFF,
+  light: #7a7a7a,
+  dark: #333333,
+  darker: #000000,
+
+  
+  // brand colors
+  reddark: #c9462c,
+  redlight: #e23d22,
+  bluedarker: #1f3356,
+  bluedark: #0098b6,
+  bluelight: #23b9d0
+);
+
+
+/**
+ * Front-end function.
+ */
+
+@function color($name) {
+  @return map-get($colors, $name);
+}

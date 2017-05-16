@@ -1,0 +1,121 @@
+/**
+ * Scales
+ */
+
+$scales: (
+  xtiny: 15px,
+  tiny: 17px,
+  small: 21px,
+  normal: 23px,
+  large: 25px,
+  xlarge: 32px,
+  xxlarge: 50px,
+  xxxlarge: 79px
+);
+
+@function fontscale($name) {
+  @if map-get($mq-context, until) {
+    $breakpoint: map-get($mq-context, until);
+  } @else {
+    $breakpoint: map-get($mq-context, from);
+  }
+  @return map-get($scales, $name);
+}
+
+/**
+ * Weights
+ */
+
+$weights: (
+  thin: 300,
+  regular: 400, /* default */
+  bold: 600
+);
+
+@function weight($name) {
+  @return map-get($weights, $name);
+}
+
+
+/**
+ * IMPL
+ */
+
+@mixin typography-impl($args) {
+  $breakpoint: (length($mq-context) > 0);
+
+  @each $arg in $args {
+    @if $arg == uppercase {
+      text-transform: uppercase;
+    }
+    @elseif $arg == lowercase {
+      text-transform: lowercase;
+    }
+    @elseif $arg == underline {
+      text-decoration: underline;
+    }
+    @else if $arg == italic {
+      font-style: italic;
+    }
+    @else if $arg == center {
+      text-align: center;
+    }
+    @else if $arg == left {
+      text-align: left;
+    }
+    @else if $arg == right {
+      text-align: right;
+    }
+    @else if $arg == justify {
+      text-align: justify;
+    }
+    @else {
+      @if map-has-key($scales, $arg) {
+        font-size: fontscale($arg);
+      }
+      @elseif map-has-key($weights, $arg) {
+        font-weight: weight($arg);
+        @if $arg == heavy {
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+      @elseif map-has-key($colors, $arg) {
+        color: color($arg);
+      }
+    }
+  }
+}
+
+/**
+ * Front-end mixin.
+ * usage : @include typo($desktop: thin red, $tablet: bold underline)
+ */
+
+@mixin typo(
+  $desktop: false,
+  $mobile: false,
+  $tablet: false,
+  $wide: false
+) {
+  @include typography-impl($desktop);
+
+  @if false != $tablet {
+    @include mq($until: tablet) {
+      @include typography-impl($tablet);
+    }
+  }
+
+  @if false != $mobile {
+    @include mq($until: mobile) {
+      @include typography-impl($mobile);
+    }
+  }
+
+  
+
+  @if false != $wide {
+    @include mq($from: wide) {
+      @include typography-impl($wide);
+    }
+  }
+}

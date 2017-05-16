@@ -1,0 +1,42 @@
+.header {
+	@extend .inner;
+	height: 100%;
+	position: relative;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&-logo {
+		position: relative;
+		
+		img {
+			@include fluid(width, $desktop: auto, $tablet: 200px, $mobile: 150px);
+		}
+	}
+
+	&-menuToggle {
+		display: none;
+		// @include mq($until: mobile) { display: block; }
+
+		position: absolute;
+		top: 20px;
+		right: 0;
+		transform: translateY(-50%);
+
+		.icon {
+			fill: color(dark);
+			height: 30px;
+			width: 30px;
+			padding: 10px;
+			box-sizing: content-box;
+		}
+
+		.icon-close { display: none; }
+
+		&.is-active {
+			.icon-open { display: none; }
+			.icon-close { display: block; }
+		}
+	}
+}
