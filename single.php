@@ -1,7 +1,7 @@
 <?
 global $post;
 the_post();
-get_header('compiled');
+get_header();
 ?>
 <div class="standard">
 	<a class="standard-back" href="<?= get_post_type_archive_link('post') ?>">&larr; Tous les articles</a>
@@ -11,9 +11,8 @@ get_header('compiled');
 			<div class="standard-meta">Publié le <?= date_i18n('j F Y') ?></div>
 			<div class="standard-content"><? the_content(); ?></div>
 		</div>
-		<!-- <? get_view('sidebar') ?> -->
 	</div>
 </div>
 <?
-get_footer('compiled');
+get_footer();
 ?>

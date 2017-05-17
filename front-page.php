@@ -1,5 +1,5 @@
 <?
-get_header('compiled');
+get_header();
 ?>
 <div class="accueil">
 
@@ -98,5 +98,5 @@ get_header('compiled');
 
 </div>
 <?
-get_footer('compiled');
+get_footer();
 ?>

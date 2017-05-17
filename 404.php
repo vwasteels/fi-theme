@@ -1,5 +1,5 @@
 <?
-get_header('compiled');
+get_header();
 ?>
 <div class="standard">
 	<a class="standard-back" href="<?= home_url() ?>">&larr; Retour à l'accueil</a>
@@ -13,5 +13,5 @@ get_header('compiled');
 	</div>
 </div>
 <?
-get_footer('compiled');
+get_footer();
 ?>

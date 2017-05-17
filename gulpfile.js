@@ -3,42 +3,10 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
-var argv = require('yargs').argv;
-var template = require('gulp-template');
-var source = require('vinyl-source-stream');
-
-var xtend = require('xtend');
-var browserify = require('browserify');
-var browserifyInc = require('browserify-incremental');
-
-var execSync = require('child_process').execSync,
-    commitHash = execSync('git log -n 1', {'encoding': 'UTF8'});
 
 var paths = {
     sass: 'sass/{,*/}*.scss',
 };
-
-// append ?noCache=<hash-from-git-commit> on app.js and app.css files
-var noCache = "?noCache=" + commitHash.split("\n")[0].split(" ")[1].substring(0,8);
-
-// browserify
-var debug = !argv.env || 'prod'.indexOf(argv.env) == -1;
-debug = false;
-var bundler = browserify(xtend(browserifyInc.args, {
-  debug: debug
-}));
-var watching = false;
-
-bundler.add('app/index.js');
-browserifyInc(bundler, {cacheFile: './cache/browserify-cache.json'});
-
-gulp.task('browserify', function() {
-  return bundler.bundle()
-    .on('error', onError)
-    .pipe(source('app.js'))
-    .pipe(gulp.dest(''));
-});
-
 
 gulp.task('sass', function() {
     return gulp.src('sass/index.scss')
@@ -51,29 +19,9 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(''));
 });
 
-gulp.task('footercache', function() {
-  return gulp
-    .src('footer.php')
-    .pipe(template({ killCache: noCache }))
-    .pipe(rename('footer-compiled.php'))
-    .pipe(gulp.dest(''));
-});
-
-gulp.task('headercache', function() {
-  return gulp
-    .src('header.php')
-    .pipe(template({ killCache: noCache }))
-    .pipe(rename('header-compiled.php'))
-    .pipe(gulp.dest(''));
-});
-
-gulp.task('build', ['headercache','sass','footercache', 'browserify']);
-
+gulp.task('build', ['sass']);
 gulp.task('default', ['build'], function() {
     gulp.watch(paths.sass, ['sass']);
-    gulp.watch(['footer.php'], ['footercache']);
-    gulp.watch(['header.php'], ['headercache']);
-    gulp.watch('app/{,*/}*.js', ['browserify']);
 });
 
 

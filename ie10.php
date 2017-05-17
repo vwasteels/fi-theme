@@ -1,5 +1,5 @@
 <?
-get_header('compiled');
+get_header();
 get_view('ie10');
-get_footer('compiled');
+get_footer();
 ?>

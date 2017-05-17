@@ -527,28 +527,19 @@ main {
             align-items: center; } }
   /* line 172, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
   .accueil-actus-facebook {
-    width: 45%;
-    margin: 0 2.5%;
+    width: 500px;
     -ms-flex-negative: 0;
         flex-shrink: 0; }
-    @media (max-width: 63.99em) {
-      /* line 172, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
-      .accueil-actus-facebook {
-        width: 500px; } }
     @media (max-width: 42.49em) {
       /* line 172, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
       .accueil-actus-facebook {
         display: none; } }
   /* line 179, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
   .accueil-actus-news {
-    width: 45%;
-    margin: 0 2.5%;
+    width: 500px;
+    margin: 0;
     -ms-flex-negative: 0;
         flex-shrink: 0; }
-    @media (max-width: 63.99em) {
-      /* line 179, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
-      .accueil-actus-news {
-        width: 500px; } }
     @media (max-width: 42.49em) {
       /* line 179, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
       .accueil-actus-news {

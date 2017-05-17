@@ -170,15 +170,15 @@
 			}
 		}
 		&-facebook {
-			@include fluid(width, $desktop: 45%, $tablet: 500px);
-			@include fluid(margin, $desktop: 0 2.5%);
+			@include fluid(width, $desktop: 500px);
+			// @include fluid(margin, $desktop: 0 2.5%);
 			flex-shrink: 0;
 
 			@include mq($until: mobile) { display: none; }
 		}
 		&-news {
-			@include fluid(width, $desktop: 45%, $tablet: 500px, $mobile: 100%);
-			@include fluid(margin, $desktop: 0 2.5%, $tablet: 0 0 80 0, $mobile: 0 0 40 0);
+			@include fluid(width, $desktop: 500px, $mobile: 100%);
+			@include fluid(margin, $desktop: 0 , $tablet: 0 0 80 0, $mobile: 0 0 40 0);
 			flex-shrink: 0;
 
 			&-cta {

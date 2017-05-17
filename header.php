@@ -15,7 +15,7 @@
     <meta name="google-site-verification" content="" />
 
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <link href="<?= get_stylesheet_directory_uri() ?>/app.css<%= killCache %>" rel="stylesheet" />
+    <link href="<?= get_stylesheet_directory_uri() ?>/app.css" rel="stylesheet" />
 
 
     <script>

@@ -1,5 +1,5 @@
 <?
-get_header('compiled');
+get_header();
 ?>
 <div class="standard">
 	<a class="standard-back" href="<?= home_url() ?>">&larr; Retour à l'accueil</a>
@@ -10,7 +10,6 @@ get_header('compiled');
 			$posts = get_posts([
 				'post_type' => 'post',
 				'posts_per_page' => -1,
-				// 'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
 				]);
 			$style = 'dark';
 			foreach($posts as $item) {
@@ -23,5 +22,5 @@ get_header('compiled');
 	</div>
 </div>
 <?
-get_footer('compiled');
+get_footer();
 ?>
