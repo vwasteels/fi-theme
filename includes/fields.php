@@ -162,45 +162,6 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
-	'key' => 'group_591c0423e651a',
-	'title' => 'Page',
-	'fields' => array (
-	),
-	'location' => array (
-		array (
-			array (
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'page',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'seamless',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => array (
-		0 => 'the_content',
-		1 => 'excerpt',
-		2 => 'custom_fields',
-		3 => 'discussion',
-		4 => 'comments',
-		5 => 'revisions',
-		6 => 'slug',
-		7 => 'author',
-		8 => 'format',
-		9 => 'page_attributes',
-		10 => 'featured_image',
-		11 => 'categories',
-		12 => 'tags',
-		13 => 'send-trackbacks',
-	),
-	'active' => 1,
-	'description' => '',
-));
-
-acf_add_local_field_group(array (
 	'key' => 'group_591b02e1d6646',
 	'title' => 'Page Accueil',
 	'fields' => array (
@@ -443,10 +404,88 @@ acf_add_local_field_group(array (
 		7 => 'slug',
 		8 => 'author',
 		9 => 'format',
+		10 => 'page_attributes',
+		11 => 'featured_image',
+		12 => 'categories',
+		13 => 'tags',
+		14 => 'send-trackbacks',
+	),
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
+	'key' => 'group_591c0db34dac4',
+	'title' => 'Page Archive',
+	'fields' => array (
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'page_type',
+				'operator' => '==',
+				'value' => 'posts_page',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'seamless',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => array (
+		0 => 'the_content',
+		1 => 'excerpt',
+		2 => 'custom_fields',
+		3 => 'discussion',
+		4 => 'comments',
+		5 => 'revisions',
+		6 => 'slug',
+		7 => 'author',
+		8 => 'format',
+		9 => 'page_attributes',
 		10 => 'featured_image',
 		11 => 'categories',
 		12 => 'tags',
 		13 => 'send-trackbacks',
+	),
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
+	'key' => 'group_591c0423e651a',
+	'title' => 'Page',
+	'fields' => array (
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'page',
+			),
+		),
+	),
+	'menu_order' => 10,
+	'position' => 'normal',
+	'style' => 'seamless',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => array (
+		0 => 'excerpt',
+		1 => 'custom_fields',
+		2 => 'discussion',
+		3 => 'comments',
+		4 => 'revisions',
+		5 => 'slug',
+		6 => 'author',
+		7 => 'format',
+		8 => 'page_attributes',
+		9 => 'featured_image',
+		10 => 'categories',
+		11 => 'tags',
+		12 => 'send-trackbacks',
 	),
 	'active' => 1,
 	'description' => '',
