@@ -3,7 +3,7 @@
 <!--[if (gt IE 9)|!(IE) ]><html><![endif]-->
 <head>
 
-	<title><? wp_title( '|', true, 'right' ); ?></title>
+	<title><? wp_title( '|', true, 'right' ); ?><? bloginfo('name') ?> | <? bloginfo('description') ?></title>
 
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta http-equiv="Content-Language" content="fr_FR" />
