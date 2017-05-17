@@ -5,7 +5,7 @@
 		@include fluid(margin, $desktop: 40 0 20 0);
 	}
 	p {
-		@include typo($desktop: small $fontColor justify, $mobile: left);
+		@include typo($desktop: normal thin $fontColor, $mobile: left);
 		@include fluid(margin-bottom, $desktop: 20);
 	}
 	a {
@@ -16,7 +16,7 @@
 	ul, ol {
 		@include fluid(margin-bottom, $desktop: 10);
 		li {
-			@include typo(small $fontColor);
+			@include typo(normal thin $fontColor);
 			@include fluid(margin-left, $desktop: 20);
 		}
 	}

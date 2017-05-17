@@ -1,42 +1,34 @@
 .header {
-	@extend .inner;
-	height: 100%;
-	position: relative;
-	
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	background-color: color(bluedark);
 
-	&-logo {
-		position: relative;
-		
-		img {
-			@include fluid(width, $desktop: auto, $tablet: 200px, $mobile: 150px);
+	&-inner {
+		@extend .inner;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include mq($until: mobile) {
+			flex-direction: column;
 		}
 	}
 
-	&-menuToggle {
-		display: none;
-		// @include mq($until: mobile) { display: block; }
-
-		position: absolute;
-		top: 20px;
-		right: 0;
-		transform: translateY(-50%);
-
-		.icon {
-			fill: color(dark);
-			height: 30px;
-			width: 30px;
-			padding: 10px;
-			box-sizing: content-box;
+	&-logo {
+		position: relative;
+		padding: 010px 0;
+		
+		img {
+			width: 200px;
 		}
+	}
 
-		.icon-close { display: none; }
+	&-side {
+		@include fluid(margin-bottom, $mobile: 40);
 
-		&.is-active {
-			.icon-open { display: none; }
-			.icon-close { display: block; }
+		&-main {
+			@include typo($desktop: lighter large right, $tablet: normal, $mobile: small center);
+		}
+		&-secondary {
+			@include typo($desktop: bluedarker normal right, $tablet: small, $mobile: small center);
 		}
 	}
 }

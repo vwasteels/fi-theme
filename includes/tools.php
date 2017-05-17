@@ -1,27 +1,15 @@
 <?
 
 
-/* Debug Helpers */
-/* --------------------------------------------------------------------------------- */
-
-function var_debug($var) {
-	echo '<pre>';
-	var_dump($var);
-	echo '</pre>';
-}
-
 
 /* Template Helpers */
 /* --------------------------------------------------------------------------------- */
 
-function icon($id, $class = '', $inline = false) {
-  if($inline) {
-    
-  } else
-    echo '<svg class="icon '.$class.'"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-'.$id.'"></use></svg>';
-}
 
-// careful with security here
+/* 
+ * load view form ./views folder
+ */
+
 function get_view($name) {
 	include(TEMPLATEPATH.'/views/'.$name.'.php');
 }

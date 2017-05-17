@@ -1,10 +1,17 @@
-<? 
-get_header('compiled'); 
+<?
+get_header('compiled');
 ?>
-<div class="error">
-	<h1 class="error-heading"><i>Erreur</i> <b>404</b></h1>	
-	<p class="error-description">La page demandée est introuvable, veuillez utiliser le menu ci-dessus pour reprendre la navigation.</p>
+<div class="standard">
+	<a class="standard-back" href="<?= home_url() ?>">&larr; Retour à l'accueil</a>
+	<h1 class="standard-title">Erreur 404</h1>
+	<div class="standard-body">
+		<div class="standard-main">
+			<div class="standard-content">
+				<p style="text-align: center;">La page demandée est introuvable.</p>
+			</div>
+		</div>
+	</div>
 </div>
-<? 
-get_footer('compiled'); 
+<?
+get_footer('compiled');
 ?>

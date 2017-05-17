@@ -1,0 +1,36 @@
+.preview {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	@include fluid(margin-bottom, $desktop: 20, $mobile: 40);
+
+	&.style-dark {
+		@include fluid(margin-bottom, $desktop: 40, $mobile: 40);
+	}
+
+	&-visual {
+		@include fluid(margin-right, $desktop: 20);
+
+		@include mq($until: mobile) { display: none; }
+	}
+	&-main {}
+	&-title {
+		@include typo(normal lighter bold);
+		@include fluid(margin-bottom, $desktop: 10);
+
+		.style-dark & { color: color(dark); }
+	}
+	&-description {
+		@include typo(small lighter);
+
+		.style-dark & { color: color(dark); }
+	}
+	&-more {
+		@include typo(small bold underline);
+		transition: all 0.2s ease;
+
+		.preview:hover & {
+			padding-right: 20px;
+		}
+	}
+}

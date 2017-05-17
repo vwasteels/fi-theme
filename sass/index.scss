@@ -11,13 +11,14 @@ $mq-show-breakpoints: (mobile, tablet, desktop);
     'base',
 
     'components/button',
-    'components/icon',
     'components/wysiwyg',
 
     'pages/accueil',
-    'pages/error',
+    'pages/standard',
     
     'views/header',
+    'views/preview',
+    'views/follow',
     'views/footer',
     'views/ie10'
     ;

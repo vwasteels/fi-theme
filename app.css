@@ -1,0 +1,1011 @@
+/* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 5, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* line 25, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+ul, li {
+  list-style: none; }
+
+@-ms-viewport {
+  width: auto !important; }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  list-style-image: url(data:0); }
+
+/* line 38, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+img {
+  -moz-user-drag: none;
+  -webkit-user-drag: none; }
+
+/* line 43, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 47, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 53, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+a {
+  outline: 0;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: inherit; }
+
+/* line 66, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+h1, h2, h3, h4 {
+  font-size: 1em;
+  font-weight: normal; }
+
+/* line 71, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: inherit; }
+
+/* line 81, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 86, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+input, select {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: middle;
+  font-size: 1em; }
+
+/* line 94, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+textarea {
+  resize: none;
+  outline: 0; }
+
+/* line 105, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+table {
+  font-size: 1em; }
+
+/* line 109, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+button::-moz-focus-inner {
+  border: 0; }
+
+/* line 113, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_reset.scss */
+[disabled] {
+  pointer-events: none; }
+
+/**
+ * Sugar for typing directly a property in multiple MQ in one line
+ */
+@font-face {
+  font-family: MontserratWeb;
+  src: url(./assets/fonts/Montserrat-Regular.otf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: MontserratWeb;
+  src: url(./assets/fonts/Montserrat-Light.otf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: MontserratWeb;
+  src: url(./assets/fonts/Montserrat-Bold.otf);
+  font-weight: 600; }
+
+/**
+ * Colors map.
+ */
+/**
+ * Front-end function.
+ */
+/**
+ * Scales
+ */
+/**
+ * Weights
+ */
+/**
+ * IMPL
+ */
+/**
+ * Front-end mixin.
+ * usage : @include typo($desktop: thin red, $tablet: bold underline)
+ */
+/* Fluid setup */
+/* --------------------------------------------------------------------------------- */
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ * [$desktop description]
+ * @type {Boolean}
+ */
+/* line 9, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+html {
+  font-family: MontserratWeb;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+  font-size: .972vw;
+  position: relative;
+  min-height: 100%;
+  background-color: #FFFFFF; }
+  @media (min-width: 64em) {
+    /* line 9, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+    html {
+      text-rendering: geometricPrecision; } }
+  @media (min-width: 90em) {
+    /* line 9, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+    html {
+      font-size: 14px; } }
+  @media (max-width: 63.99em) {
+    /* line 9, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+    html {
+      font-size: 1vw; } }
+  @media (max-width: 42.49em) {
+    /* line 9, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+    html {
+      font-size: 2.4vw; } }
+
+/* line 31, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+/* line 37, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+main {
+  position: relative;
+  height: 100%; }
+
+/* line 42, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+#wpadminbar {
+  position: fixed !important; }
+
+/* line 46, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+.inner, .accueil-candidats-inner, .accueil-merci, .accueil-programme-inner, .accueil-actus-inner, .standard, .header-inner, .follow, .footer-inner, .ie10-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1300px;
+  width: 100%;
+  padding-left: 2.9rem;
+  padding-right: 2.9rem; }
+  @media (max-width: 42.49em) {
+    /* line 46, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+    .inner, .accueil-candidats-inner, .accueil-merci, .accueil-programme-inner, .accueil-actus-inner, .standard, .header-inner, .follow, .footer-inner, .ie10-inner {
+      padding-left: 1.4rem; } }
+  @media (max-width: 42.49em) {
+    /* line 46, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+    .inner, .accueil-candidats-inner, .accueil-merci, .accueil-programme-inner, .accueil-actus-inner, .standard, .header-inner, .follow, .footer-inner, .ie10-inner {
+      padding-right: 1.4rem; } }
+
+/* Common classes */
+/* --------------------------------------------------------------------------------- */
+/* line 60, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/_base.scss */
+[hidden],
+.is-hidden {
+  display: none; }
+
+/* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_button.scss */
+.button, .accueil-candidats-cta, .accueil-programme-item-cta, .accueil-actus-news-cta {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 0 3.6rem;
+  height: 5.7rem;
+  transition: all 0.2s ease; }
+  @media (max-width: 42.49em) {
+    /* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_button.scss */
+    .button, .accueil-candidats-cta, .accueil-programme-item-cta, .accueil-actus-news-cta {
+      font-size: 16px; } }
+  /* line 14, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_button.scss */
+  .button:hover, .accueil-candidats-cta:hover, .accueil-programme-item-cta:hover, .accueil-actus-news-cta:hover {
+    opacity: 0.8; }
+
+/* line 2, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+.accueil-candidats {
+  background-color: #23b9d0; }
+  /* line 5, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-candidats-banner {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 42.9rem;
+    background-position: center top;
+    background-size: cover; }
+    @media (min-width: 90em) {
+      /* line 5, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-candidats-banner {
+        height: 42.9rem; } }
+    @media (max-width: 63.99em) {
+      /* line 5, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-candidats-banner {
+        height: 35.7rem; } }
+    @media (max-width: 42.49em) {
+      /* line 5, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-candidats-banner {
+        height: 21.4rem; } }
+  /* line 13, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-candidats-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 5.7rem 0; }
+    @media (max-width: 42.49em) {
+      /* line 13, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-candidats-inner {
+        padding: 1.4rem 0; } }
+  /* line 20, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-candidats-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 4.3rem; }
+    @media (max-width: 42.49em) {
+      /* line 20, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-candidats-list {
+        display: none; } }
+  /* line 27, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-candidats-item {
+    margin: 0 2.9rem; }
+    /* line 30, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-candidats-item-name {
+      font-size: 35px;
+      font-weight: 300;
+      color: #FFFFFF;
+      text-align: center; }
+    /* line 33, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-candidats-item-title {
+      font-size: 20px;
+      color: #1f3356;
+      text-align: center;
+      margin-bottom: 1.4rem; }
+    /* line 37, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-candidats-item-description {
+      font-size: 20px;
+      color: #FFFFFF;
+      text-align: justify; }
+  /* line 41, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-candidats-cta {
+    color: #FFFFFF;
+    background-color: #1f3356; }
+
+/* line 48, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+.accueil-merci {
+  max-width: 1000px;
+  padding-top: 5.7rem;
+  padding-bottom: 5.7rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center; }
+  @media (max-width: 42.49em) {
+    /* line 48, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-merci {
+      padding-top: 1.4rem; } }
+  @media (max-width: 42.49em) {
+    /* line 48, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-merci {
+      padding-bottom: 1.4rem; } }
+  @media (max-width: 42.49em) {
+    /* line 48, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-merci {
+      -ms-flex-direction: column;
+          flex-direction: column; } }
+  /* line 60, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-merci-visual {
+    width: 45%; }
+    @media (max-width: 42.49em) {
+      /* line 60, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-merci-visual {
+        width: 100%; } }
+  /* line 63, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-merci-description {
+    width: 45%;
+    font-size: 35px;
+    color: #1f3356;
+    text-align: center; }
+    @media (max-width: 42.49em) {
+      /* line 63, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-merci-description {
+        width: 100%; } }
+    @media (max-width: 42.49em) {
+      /* line 63, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-merci-description {
+        padding: 1.4rem 0; } }
+    @media (max-width: 42.49em) {
+      /* line 63, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-merci-description {
+        font-size: 20px; } }
+
+/* line 70, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+.accueil-programme {
+  padding-bottom: 5.7rem; }
+  /* line 73, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-programme-title {
+    background-color: #c9462c;
+    color: #FFFFFF;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1.4rem 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-bottom: 2.9rem; }
+    @media (max-width: 42.49em) {
+      /* line 73, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-title {
+        font-size: 25px; } }
+  /* line 87, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-programme-description {
+    margin: 0 auto;
+    max-width: 900px;
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 2.9rem; }
+    @media (max-width: 42.49em) {
+      /* line 87, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-description {
+        text-align: left; } }
+  /* line 93, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-programme-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 3.6rem; }
+    @media (max-width: 42.49em) {
+      /* line 93, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-list {
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+  /* line 102, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-programme-item {
+    width: 45%;
+    width: 45%;
+    height: 28.6rem;
+    margin-bottom: 0;
+    background-size: cover;
+    position: relative; }
+    @media (max-width: 42.49em) {
+      /* line 102, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-item {
+        width: 100%; } }
+    @media (max-width: 42.49em) {
+      /* line 102, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-item {
+        margin-bottom: 1.4rem; } }
+    /* line 110, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-programme-item:nth-child(1) {
+      background-image: url(./assets/images/programme.png); }
+    /* line 111, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-programme-item:nth-child(2) {
+      background-image: url(./assets/images/livrets.jpg); }
+    /* line 113, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-programme-item-cta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #FFFFFF;
+      transition: all 0.1s ease; }
+      /* line 121, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-item-cta:hover {
+        opacity: 1; }
+      /* line 123, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-item:nth-child(1) .accueil-programme-item-cta {
+        background: rgba(201, 70, 44, 0.8); }
+      /* line 124, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-item:nth-child(1):hover .accueil-programme-item-cta {
+        background: #c9462c; }
+      /* line 125, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-item:nth-child(2) .accueil-programme-item-cta {
+        background: rgba(0, 152, 182, 0.8); }
+      /* line 126, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-item:nth-child(2):hover .accueil-programme-item-cta {
+        background: #0098b6; }
+  /* line 129, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-programme-network {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+    /* line 134, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-programme-network-title {
+      font-size: 20px;
+      color: #333333;
+      margin-bottom: 0.7rem; }
+    /* line 138, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-programme-network-item {
+      margin: 0 0.4rem;
+      transition: opacity 0.1s ease; }
+      /* line 142, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-network-item:hover {
+        opacity: 0.8; }
+      /* line 144, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-programme-network-item img {
+        width: 7.1rem;
+        height: 7.1rem; }
+
+/* line 152, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+.accueil-actus {
+  background-color: #c9462c;
+  padding: 5.7rem 0; }
+  @media (max-width: 42.49em) {
+    /* line 152, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-actus {
+      padding: 2.9rem 0; } }
+  /* line 159, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-actus-title {
+    font-weight: 300;
+    font-size: 35px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5.7rem; }
+    @media (max-width: 42.49em) {
+      /* line 159, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-title {
+        font-size: 25px; } }
+    @media (max-width: 42.49em) {
+      /* line 159, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-title {
+        margin-bottom: 2.9rem; } }
+  /* line 163, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-actus-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    @media (max-width: 63.99em) {
+      /* line 163, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-list {
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+        -ms-flex-align: center;
+            align-items: center; } }
+  /* line 172, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-actus-facebook {
+    width: 45%;
+    margin: 0 2.5%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    @media (max-width: 63.99em) {
+      /* line 172, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-facebook {
+        width: 500px; } }
+    @media (max-width: 42.49em) {
+      /* line 172, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-facebook {
+        display: none; } }
+  /* line 179, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+  .accueil-actus-news {
+    width: 45%;
+    margin: 0 2.5%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    @media (max-width: 63.99em) {
+      /* line 179, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-news {
+        width: 500px; } }
+    @media (max-width: 42.49em) {
+      /* line 179, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-news {
+        width: 100%; } }
+    @media (max-width: 63.99em) {
+      /* line 179, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-news {
+        margin: 0 0 5.7rem 0; } }
+    @media (max-width: 42.49em) {
+      /* line 179, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+      .accueil-actus-news {
+        margin: 0 0 2.9rem 0; } }
+    /* line 184, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+    .accueil-actus-news-cta {
+      background-color: #0098b6;
+      color: #FFFFFF;
+      margin: 0 2.5%; }
+      @media (max-width: 63.99em) {
+        /* line 184, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_accueil.scss */
+        .accueil-actus-news-cta {
+          margin: 0 0 2.9rem 0; } }
+
+/* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+.standard {
+  padding-top: 7.1rem;
+  padding-bottom: 7.1rem;
+  position: relative;
+  min-height: 70vh; }
+  /* line 8, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+  .standard-back {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1f3356; }
+    @media (max-width: 42.49em) {
+      /* line 8, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+      .standard-back {
+        left: 10px; } }
+  /* line 14, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+  .standard-title {
+    font-size: 35px;
+    font-weight: 300;
+    color: #1f3356;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 7.1rem; }
+  /* line 18, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+  .standard-body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  /* line 22, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+  .standard-main {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    max-width: 700px;
+    margin-right: 2.9rem; }
+  /* line 27, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+  .standard-meta {
+    font-size: 16px;
+    font-weight: 300;
+    color: #1f3356;
+    font-style: italic;
+    margin-bottom: 1.4rem; }
+  /* line 3, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content h2 {
+    font-size: 25px;
+    margin: 2.9rem 0 1.4rem 0; }
+  /* line 7, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #333333;
+    margin-bottom: 1.4rem; }
+    @media (max-width: 42.49em) {
+      /* line 7, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+      .standard-content p {
+        text-align: left; } }
+  /* line 11, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content a {
+    text-decoration: underline; }
+  /* line 16, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content ul, .standard-content ol {
+    margin-bottom: 0.7rem; }
+    /* line 18, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .standard-content ul li, .standard-content ol li {
+      font-size: 20px;
+      font-weight: 300;
+      color: #333333;
+      margin-left: 1.4rem; }
+  /* line 24, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content ul li {
+    list-style: disc outside; }
+  /* line 27, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content ol li {
+    list-style: decimal outside; }
+  /* line 31, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content .gallery {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    /* line 35, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .standard-content .gallery-item {
+      margin-right: 0.7rem;
+      margin-bottom: 0.7rem; }
+      /* line 39, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+      .standard-content .gallery-item:hover {
+        opacity: 0.7; }
+      /* line 41, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+      .standard-content .gallery-item a, .standard-content .gallery-item img {
+        display: block; }
+  /* line 46, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content iframe {
+    width: 100%;
+    margin: 0.7rem 0; }
+  /* line 51, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content .aligncenter {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; }
+  /* line 58, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content .alignright {
+    float: right;
+    margin-left: 20px; }
+  /* line 60, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+  .standard-content img {
+    max-width: 100%;
+    height: auto; }
+  /* line 34, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+  .standard-sidebar {
+    width: 400px;
+    -ms-flex-positive: 0;
+        flex-grow: 0; }
+    @media (max-width: 42.49em) {
+      /* line 34, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/pages/_standard.scss */
+      .standard-sidebar {
+        display: none; } }
+
+/* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+.header {
+  background-color: #0098b6; }
+  /* line 4, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+  .header-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; }
+    @media (max-width: 42.49em) {
+      /* line 4, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+      .header-inner {
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+  /* line 15, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+  .header-logo {
+    position: relative;
+    padding: 010px 0; }
+    /* line 19, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+    .header-logo img {
+      width: 200px; }
+  @media (max-width: 42.49em) {
+    /* line 24, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+    .header-side {
+      margin-bottom: 2.9rem; } }
+  /* line 27, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+  .header-side-main {
+    color: #FFFFFF;
+    font-size: 25px;
+    text-align: right; }
+    @media (max-width: 63.99em) {
+      /* line 27, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+      .header-side-main {
+        font-size: 20px; } }
+    @media (max-width: 42.49em) {
+      /* line 27, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+      .header-side-main {
+        font-size: 16px;
+        text-align: center; } }
+  /* line 30, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+  .header-side-secondary {
+    color: #1f3356;
+    font-size: 20px;
+    text-align: right; }
+    @media (max-width: 63.99em) {
+      /* line 30, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+      .header-side-secondary {
+        font-size: 16px; } }
+    @media (max-width: 42.49em) {
+      /* line 30, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_header.scss */
+      .header-side-secondary {
+        font-size: 16px;
+        text-align: center; } }
+
+/* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+.preview {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  width: 100%;
+  margin-bottom: 1.4rem; }
+  @media (max-width: 42.49em) {
+    /* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+    .preview {
+      margin-bottom: 2.9rem; } }
+  /* line 7, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+  .preview.style-dark {
+    margin-bottom: 2.9rem; }
+    @media (max-width: 42.49em) {
+      /* line 7, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+      .preview.style-dark {
+        margin-bottom: 2.9rem; } }
+  /* line 11, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+  .preview-visual {
+    margin-right: 1.4rem; }
+    @media (max-width: 42.49em) {
+      /* line 11, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+      .preview-visual {
+        display: none; } }
+  /* line 17, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+  .preview-title {
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 0.7rem; }
+    /* line 21, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+    .style-dark .preview-title {
+      color: #333333; }
+  /* line 23, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+  .preview-description {
+    font-size: 16px;
+    color: #FFFFFF; }
+    /* line 26, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+    .style-dark .preview-description {
+      color: #333333; }
+  /* line 28, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+  .preview-more {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.2s ease; }
+    /* line 32, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_preview.scss */
+    .preview:hover .preview-more {
+      padding-right: 20px; }
+
+/* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+.follow {
+  padding-top: 5.7rem;
+  padding-bottom: 5.7rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center; }
+  /* line 9, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+  .follow-heading {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 300;
+    color: #1f3356;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem; }
+    @media (max-width: 42.49em) {
+      /* line 9, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+      .follow-heading {
+        font-size: 25px; } }
+  /* line 13, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+  .follow-description {
+    text-align: center;
+    font-size: 20px;
+    color: #333333;
+    font-weight: 300;
+    margin-bottom: 2.9rem; }
+    @media (max-width: 42.49em) {
+      /* line 13, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+      .follow-description {
+        font-size: 16px; } }
+  /* line 18, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+  .follow-newsletter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+        align-items: stretch; }
+    /* line 22, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+    .follow-newsletter input[type="email"] {
+      height: 60px;
+      padding: 0 1.4rem;
+      border: 1px solid #0098b6;
+      font-weight: 300;
+      font-size: 20px;
+      font-style: italic;
+      font-family: MontserratWeb; }
+      @media (max-width: 42.49em) {
+        /* line 22, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+        .follow-newsletter input[type="email"] {
+          font-size: 16px; } }
+    /* line 29, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+    .follow-newsletter button {
+      cursor: pointer;
+      background: #0098b6;
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 0 1.4rem; }
+      /* line 35, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_follow.scss */
+      .follow-newsletter button img {
+        width: 30px;
+        height: 30px; }
+
+/* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_footer.scss */
+.footer {
+  background-color: #23b9d0; }
+  /* line 4, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_footer.scss */
+  .footer-inner {
+    padding-top: 2.9rem;
+    padding-bottom: 2.9rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    @media (max-width: 42.49em) {
+      /* line 4, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_footer.scss */
+      .footer-inner {
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+  /* line 16, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_footer.scss */
+  .footer-column {
+    width: 30%; }
+    @media (max-width: 42.49em) {
+      /* line 16, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_footer.scss */
+      .footer-column {
+        width: 100%; } }
+    @media (max-width: 42.49em) {
+      /* line 16, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_footer.scss */
+      .footer-column {
+        margin-bottom: 1.4rem; } }
+    /* line 20, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_footer.scss */
+    .footer-column-title {
+      font-weight: 300;
+      color: #FFFFFF;
+      font-size: 25px;
+      margin-bottom: 1.4rem; }
+    /* line 3, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description h2 {
+      font-size: 25px;
+      margin: 2.9rem 0 1.4rem 0; }
+    /* line 7, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description p {
+      font-size: 20px;
+      font-weight: 300;
+      color: #FFFFFF;
+      margin-bottom: 1.4rem; }
+      @media (max-width: 42.49em) {
+        /* line 7, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+        .footer-column-description p {
+          text-align: left; } }
+    /* line 11, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description a {
+      text-decoration: underline; }
+    /* line 16, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description ul, .footer-column-description ol {
+      margin-bottom: 0.7rem; }
+      /* line 18, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+      .footer-column-description ul li, .footer-column-description ol li {
+        font-size: 20px;
+        font-weight: 300;
+        color: #FFFFFF;
+        margin-left: 1.4rem; }
+    /* line 24, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description ul li {
+      list-style: disc outside; }
+    /* line 27, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description ol li {
+      list-style: decimal outside; }
+    /* line 31, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description .gallery {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      /* line 35, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+      .footer-column-description .gallery-item {
+        margin-right: 0.7rem;
+        margin-bottom: 0.7rem; }
+        /* line 39, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+        .footer-column-description .gallery-item:hover {
+          opacity: 0.7; }
+        /* line 41, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+        .footer-column-description .gallery-item a, .footer-column-description .gallery-item img {
+          display: block; }
+    /* line 46, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description iframe {
+      width: 100%;
+      margin: 0.7rem 0; }
+    /* line 51, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description .aligncenter {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto; }
+    /* line 58, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description .alignright {
+      float: right;
+      margin-left: 20px; }
+    /* line 60, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/components/_wysiwyg.scss */
+    .footer-column-description img {
+      max-width: 100%;
+      height: auto; }
+
+/* line 1, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+.ie10 {
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  margin: 0 auto;
+  padding: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none; }
+  /* line 19, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+  .ie10-heading {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px; }
+  /* line 25, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+  .ie10-description {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 40px; }
+  /* line 30, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+  .ie10-browsers {
+    margin: 0 auto; }
+  /* line 34, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+  .ie10-browser {
+    float: left;
+    width: 25%;
+    padding: 0 5%;
+    text-align: center; }
+    /* line 40, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+    .ie10-browser-visual {
+      width: 100%; }
+    /* line 44, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+    .ie10-browser-name {
+      font-size: 20px;
+      display: block; }
+    /* line 49, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+    .ie10-browser-version {
+      font-size: 16px;
+      color: #FFFFFF;
+      display: block; }
+  /* line 55, /Users/vincentwasteels/Sites/fi/wp/wp-content/themes/fi-theme/sass/views/_ie10.scss */
+  .ie10-clear {
+    clear: both; }

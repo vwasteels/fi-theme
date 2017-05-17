@@ -1,3 +1,192 @@
 .accueil {
-	
+	&-candidats {
+		background-color: color(bluelight);
+
+		&-banner {
+			width: 100%;
+			max-width: 1800px;
+			margin: 0 auto;
+			@include fluid(height, $wide: 600, $desktop: 600, $tablet: 500, $mobile: 300);
+			background-position: center top;
+			background-size: cover;
+		}
+		&-inner {
+			@extend .inner;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			@include fluid(padding, $desktop: 80 0, $mobile: 20 0);
+		}
+		&-list {
+			display: flex;
+			justify-content: space-around;
+			@include fluid(margin-bottom, $desktop: 60);
+
+			@include mq($until: mobile) { display: none; }
+		}
+		&-item {
+			@include fluid(margin, $desktop: 0 40);
+
+			&-name {
+				@include typo(xlarge thin lighter center);
+			}
+			&-title {
+				@include typo(normal bluedarker center);
+				@include fluid(margin-bottom, $desktop: 20);
+			}
+			&-description {
+				@include typo(normal lighter justify);
+			}
+		}
+		&-cta {
+			@extend .button;
+			color: color(lighter);
+			background-color: color(bluedarker);
+		}
+	}
+
+	&-merci {
+		@extend .inner;
+		max-width: 1000px;
+		@include fluid(padding-top, $desktop: 80, $mobile: 20);
+		@include fluid(padding-bottom, $desktop: 80, $mobile: 20);
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include mq($until: mobile) { flex-direction: column; }
+
+		&-visual {
+			@include fluid(width, $desktop: 45%, $mobile: 100%);
+		}
+		&-description {
+			@include fluid(width, $desktop: 45%, $mobile: 100%);
+			@include fluid(padding, $mobile: 20 0);
+			@include typo($desktop: xlarge bluedarker center, $mobile: normal);
+		}
+	}
+
+	&-programme {
+		@include fluid(padding-bottom, $desktop: 80);
+
+		&-title {
+			background-color: color(reddark);
+			@include typo($desktop: lighter xlarge center thin uppercase, $mobile: large);
+
+			@include fluid(padding, $desktop: 20 0);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@include fluid(margin-bottom, $desktop: 40);
+		}
+		&-inner {
+			@extend .inner;
+		}
+		&-description {
+			margin: 0 auto;
+			max-width: 900px;
+			@include typo($desktop: normal dark center thin, $mobile: left);
+			@include fluid(margin-bottom, $desktop: 40);
+		}
+		&-list {
+			display: flex;
+			justify-content: space-around;
+			@include fluid(margin-bottom, $desktop: 50);
+
+			@include mq($until: mobile) {
+				flex-direction: column;
+			}
+		}
+		&-item {
+			width: 45%;
+			@include fluid(width, $desktop: 45%, $mobile: 100%);
+			@include fluid(height, $desktop: 400);
+			@include fluid(margin-bottom, $desktop: 0, $mobile: 20);
+			background-size: cover;
+			position: relative;
+
+			&:nth-child(1) { background-image: url(./assets/images/programme.png); }
+			&:nth-child(2) { background-image: url(./assets/images/livrets.jpg); }
+
+			&-cta {
+				@extend .button;
+				position: absolute;
+				top: 50%; left: 50%;
+				transform: translate(-50%, -50%);
+				color: color(lighter);
+				transition: all 0.1s ease;
+
+				&:hover { opacity: 1; }
+
+				.accueil-programme-item:nth-child(1) & { background: rgba(201,70,44,0.8); }
+				.accueil-programme-item:nth-child(1):hover & { background: rgba(201,70,44,1); }
+				.accueil-programme-item:nth-child(2) & { background: rgba(0,152,182,0.8); }
+				.accueil-programme-item:nth-child(2):hover & { background: rgba(0,152,182,1); }
+			}
+		}
+		&-network {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&-title {
+				@include typo(normal dark);
+				@include fluid(margin-bottom, $desktop: 10);
+			}
+			&-item {
+				@include fluid(margin, $desktop: 0 5);
+				transition: opacity 0.1s ease;
+
+				&:hover { opacity: 0.8; }
+
+				img {
+					@include fluid(width, $desktop: 100);
+					@include fluid(height, $desktop: 100);
+				}
+			}
+		}
+	}
+
+	&-actus {
+		background-color: color(reddark);
+		@include fluid(padding, $desktop: 80 0, $mobile: 40 0);
+
+		&-inner {
+			@extend .inner;
+		}
+		&-title {
+			@include typo($desktop: thin xlarge lighter uppercase center, $mobile: large);
+			@include fluid(margin-bottom, $desktop: 80, $mobile: 40);
+		}
+		&-list {
+			display: flex;
+			justify-content: space-around;
+
+			@include mq($until: tablet) {
+				flex-direction: column-reverse;
+				align-items: center;
+			}
+		}
+		&-facebook {
+			@include fluid(width, $desktop: 45%, $tablet: 500px);
+			@include fluid(margin, $desktop: 0 2.5%);
+			flex-shrink: 0;
+
+			@include mq($until: mobile) { display: none; }
+		}
+		&-news {
+			@include fluid(width, $desktop: 45%, $tablet: 500px, $mobile: 100%);
+			@include fluid(margin, $desktop: 0 2.5%, $tablet: 0 0 80 0, $mobile: 0 0 40 0);
+			flex-shrink: 0;
+
+			&-cta {
+				@extend .button;
+				background-color: color(bluedark);
+				color: color(lighter);
+				@include fluid(margin, $desktop: 0 2.5%, $tablet: 0 0 40 0);
+			}
+		}
+	}
 }

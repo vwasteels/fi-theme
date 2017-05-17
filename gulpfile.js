@@ -3,13 +3,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
-var svgstore = require('gulp-svgstore');
-var inject = require('gulp-inject');
-var svgmin = require('gulp-svgmin');
 var argv = require('yargs').argv;
 var template = require('gulp-template');
 var source = require('vinyl-source-stream');
-var gulpif = require('gulp-if');
 
 var xtend = require('xtend');
 var browserify = require('browserify');
@@ -20,7 +16,6 @@ var execSync = require('child_process').execSync,
 
 var paths = {
     sass: 'sass/{,*/}*.scss',
-    svgs: 'svg/*.svg'
 };
 
 // append ?noCache=<hash-from-git-commit> on app.js and app.css files
@@ -56,36 +51,9 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(''));
 });
 
-gulp.task('svgstore', function() {
-  var svgs = gulp
-    .src(paths.svgs)
-    .pipe(rename({prefix: 'icon-'}))
-
-    // problem with generated SVG that will not follow the stroke
-    // .pipe(svgmin({
-    //   plugins: [
-    //   	{
-    //   		cleanupIDs: {
-    //             prefix: prefix + '-',
-    //             minify: true
-    //         }
-    //     },
-    //   	{
-    //   		removeTitle: true
-    //   	}, {
-    //   		removeDesc: true
-    //   	}
-    //   ]
-    // }))
-    .pipe(svgstore({ inlineSvg: true }));
-
-  function fileContents(filePath, file) {
-    return file.contents.toString();
-  }
-
+gulp.task('footercache', function() {
   return gulp
     .src('footer.php')
-    .pipe(inject(svgs, { transform: fileContents }))
     .pipe(template({ killCache: noCache }))
     .pipe(rename('footer-compiled.php'))
     .pipe(gulp.dest(''));
@@ -99,11 +67,11 @@ gulp.task('headercache', function() {
     .pipe(gulp.dest(''));
 });
 
-gulp.task('build', ['headercache','sass','svgstore', 'browserify']);
+gulp.task('build', ['headercache','sass','footercache', 'browserify']);
 
 gulp.task('default', ['build'], function() {
     gulp.watch(paths.sass, ['sass']);
-    gulp.watch([paths.svgs, 'footer.php'], ['svgstore']);
+    gulp.watch(['footer.php'], ['footercache']);
     gulp.watch(['header.php'], ['headercache']);
     gulp.watch('app/{,*/}*.js', ['browserify']);
 });

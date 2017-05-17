@@ -1,73 +1,41 @@
 .follow {
-	background-color: color(cyandark);
-
-	position: relative;
-	@include fluid(padding-bottom, $wide: 50, $desktop: 100);
-
-	&-inner {
-		position: relative;
-		z-index: 1;
-		@extend .inner;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	&-icon {
-		border-radius: 100%;
-		padding: 30px;
-		margin-top: -75px;
-		position: relative;
-		background-color: color(cyandark);
-
-		.icon {
-			width: 100px;
-			height: 100px;
-			fill: color(cyandarker);
-		}
-	}
+	@extend .inner;
+	@include fluid(padding-top, $desktop: 80);
+	@include fluid(padding-bottom, $desktop: 80);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	&-heading {
-		@include typo($desktop: center xlarge heavy lighter uppercase, $mobile: large);
-		@include textShadow(true, cyandarker);
+		@include typo($desktop: center xlarge thin bluedarker uppercase, $mobile: large);
 		@include fluid(margin-bottom, $desktop: 20);
 	}
 	&-description {
-		@include typo($desktop: large lighter center bold, $mobile: large);
-		@include fluid(margin-bottom, $desktop: 20);
+		@include typo($desktop: center normal dark thin, $mobile: small);
+		@include fluid(margin-bottom, $desktop: 40);
 	}
 
 	&-newsletter {
-		margin: 0 auto;
-
-		input[type="email"], input[type="submit"] {
-			height: 60px;
-			padding: 0 20px;
-			@include mq($until: mobile) {
-				border-radius: 6px;
-			}
-		}
-		input[type="email"] {
-			padding-right: 50px;
-			margin-bottom: 10px;
-			border-top-left-radius: 6px;
-			border-bottom-left-radius: 6px;
-
-		}
-		input[type="submit"] {
-			cursor: pointer;
-			background: color(purplelight);
-			border-top-right-radius: 6px;
-			border-bottom-right-radius: 6px;
-			@include typo(lighter bold);
-		}
-	}
-	&-fieldset {
 		display: flex;
-		justify-content: center;
+		align-items: stretch;
 
-		@include mq($until: mobile) {
-			flex-direction: column;
+		input[type="email"] {
+			height: 60px;
+			@include fluid(padding, $desktop: 0 20);
+			border: 1px solid color(bluedark);
+			@include typo($desktop: thin normal italic, $mobile: small);
+			font-family: MontserratWeb;
+		}
+		button {
+			cursor: pointer;
+			background: color(bluedark);
+			@include typo(lighter bold);
+			@include fluid(padding, $desktop: 0 20);
+
+			img {
+				width: 30px;
+				height: 30px;
+			}
 		}
 	}
 }

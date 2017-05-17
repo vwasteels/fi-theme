@@ -2,9 +2,6 @@
 node_modules
 npm-debug.log
 
-# composer
-vendor
-
 # OS
 .DS_Store
 Desktop.ini
@@ -17,10 +14,3 @@ Thumbs.db
 .*
 !.gitignore
 !.editorconfig
-
-# generated files
-app.css
-app.js
-footer-compiled.php
-header-compiled.php
-cache

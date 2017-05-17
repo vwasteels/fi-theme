@@ -1,0 +1,42 @@
+.standard {
+	@extend .inner;
+	@include fluid(padding-top, $desktop: 100);
+	@include fluid(padding-bottom, $desktop: 100);
+	position: relative;
+	min-height: 70vh;
+	
+	&-back {
+		position: absolute;
+		left: 40px; top: 10px;
+		@include typo(tiny bold bluedarker);
+		@include mq($until: mobile) { left: 10px; }
+	}
+	&-title {
+		@include typo(xlarge thin bluedarker center uppercase);
+		@include fluid(margin-bottom, $desktop: 100);
+	}
+	&-body {
+		display: flex;
+		justify-content: center;
+	}
+	&-main {
+		flex-grow: 1;
+		max-width: 700px;
+		@include fluid(margin-right, $desktop: 40);
+	}
+	&-meta {
+		@include typo(small thin bluedarker italic);
+		@include fluid(margin-bottom, $desktop: 20);
+	}
+	&-content {
+		@include wysiwyg(dark);
+	}
+	&-sidebar {
+		width: 400px;
+		flex-grow: 0;
+
+		@include mq($until: mobile) {
+			display: none;
+		}
+	}
+}

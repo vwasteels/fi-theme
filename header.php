@@ -36,13 +36,15 @@
     </div> -->
 
     <header class="header">
-        <a href='<?= site_url() ?>' class="header-logo">
-            <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.jpg">
-        </a>
+        <div class="header-inner">
+            <a href='<?= site_url() ?>' class="header-logo">
+                <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo.png">
+            </a>
 
-        <div class="header-side">
-            <div class="header-side-main"><?= get_field('header_side_main', 'option') ?></div>
-            <div class="header-side-secondary"><?= get_field('header_side_secondary', 'option') ?></div>
+            <div class="header-side">
+                <div class="header-side-main"><?= get_field('header_side_main', 'option') ?></div>
+                <div class="header-side-secondary"><?= get_field('header_side_secondary', 'option') ?></div>
+            </div>
         </div>
     </header>
 

@@ -1,0 +1,3 @@
+<div class="standard-sidebar">
+	<iframe class="standard-sidebar-facebook" src="https://www.facebook.com/plugins/page.php?href=<?= get_field('fb_page', 'option') ?>&tabs=timeline&width=400&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=194878077586805" width="400" height="1000" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</div>

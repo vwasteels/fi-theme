@@ -7,7 +7,7 @@
 add_action( 'after_setup_theme', 'blank_theme_setup' );
 function blank_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
-  remove_image_size('large');
+	remove_image_size('large');
 }
 
 add_filter('intermediate_image_sizes_advanced', function($sizes) {

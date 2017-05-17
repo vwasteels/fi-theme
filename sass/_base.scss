@@ -9,7 +9,7 @@ $font-sizes: (
 html {
 
 	// fonts setup
-	font-family: Courier New;
+	font-family: MontserratWeb;
 	@include typo(regular normal darker);
 	-webkit-font-smoothing: antialiased;
 	text-size-adjust: none;
@@ -37,6 +37,10 @@ body {
 main {
 	position: relative;
     height: 100%;
+}
+
+#wpadminbar {
+    position: fixed !important;
 }
 
 .inner {

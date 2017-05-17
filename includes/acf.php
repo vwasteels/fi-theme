@@ -1,17 +1,17 @@
 <?php
 
-require_once(TEMPLATEPATH.'/includes/advanced-custom-fields/acf.php');
+require_once(TEMPLATEPATH.'/includes/acf/acf.php');
 
 
 // customize ACF path
 add_filter('acf/settings/path', function($path) {
-	$path = get_stylesheet_directory() . '/includes/advanced-custom-fields/';
+	$path = get_stylesheet_directory() . '/includes/acf/';
 	return $path;
 });
 
 // customize ACF dir
 add_filter('acf/settings/dir', function($dir) {
-	$dir = get_stylesheet_directory_uri() . '/includes/advanced-custom-fields/';
+	$dir = get_stylesheet_directory_uri() . '/includes/acf/';
 	return $dir;
 });
 

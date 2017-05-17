@@ -1,11 +1,15 @@
-@mixin button() {
-	@include typo($desktop: center bold lighter);
-
+.button {
+	@include typo($desktop: center normal uppercase, $mobile: small);
 	cursor: pointer;
-	position: relative;
 	white-space: nowrap;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@include fluid(padding, $desktop: 0 50);
+	@include fluid(height, $desktop: 80);
+
+	transition: all 0.2s ease;
+	&:hover { opacity: 0.8; }
 }
